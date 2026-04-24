@@ -1,6 +1,6 @@
 import LoginForm from "../components/LogInForm"
 
-export default function Login() {
+export default function Login({ onLogin }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background text-on-surface font-sans relative overflow-hidden">
 
@@ -31,7 +31,7 @@ export default function Login() {
           </p>
         </div>
 
-        <LoginForm />
+        <LoginForm onLogin={onLogin} />
 
         <div className="h-1 w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
 
