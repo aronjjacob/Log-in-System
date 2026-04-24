@@ -1,19 +1,16 @@
-import LoginForm from "../components/LoginForm"
+import SignupForm from "../components/SignupForm"
 
-export default function Login({ setPage }) {
+export default function Signup({ setPage }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background text-on-surface font-sans relative overflow-hidden">
 
-      {/* background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/10 blur-[120px] rounded-full"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-tertiary/10 blur-[120px] rounded-full"></div>
       </div>
 
-      {/* CARD */}
       <div className="w-[440px] bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden relative">
 
-        {/* HEADER */}
         <div className="p-8 text-center space-y-2">
 
           <div className="flex items-center justify-center gap-2 text-primary">
@@ -23,25 +20,24 @@ export default function Login({ setPage }) {
           </div>
 
           <h1 className="text-2xl font-bold text-white">
-            Secure Login System
+            Create Account
           </h1>
 
           <p className="text-sm text-outline">
-            SHA-256 Hashing for data integrity
+            Join the secure system
           </p>
         </div>
 
-        <LoginForm />
+        <SignupForm />
 
-        {/* 🔥 ADD THIS SIGNUP LINK */}
         <div className="text-center pb-6">
           <p className="text-sm text-outline">
-            No account yet?{" "}
+            Already have an account?{" "}
             <button
-              onClick={() => setPage("signup")}
+              onClick={() => setPage("login")}
               className="text-primary hover:underline"
             >
-              Sign up
+              Login
             </button>
           </p>
         </div>
