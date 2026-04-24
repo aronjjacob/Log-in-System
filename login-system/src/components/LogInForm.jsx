@@ -1,16 +1,19 @@
 import { useState } from "react"
 
-export default function LoginForm() {
+export default function LoginForm({ onLogin }) {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log({ username, password })
+    onLogin?.({ username, password })
   }
 
   return (
-    <form className="px-8 pb-8 space-y-5 flex flex-col items-stretch text-left">
+    <form
+      onSubmit={handleSubmit}
+      className="px-8 pb-8 space-y-5 flex flex-col items-stretch text-left"
+    >
 
       <div>
         <label className="block text-xs uppercase text-outline tracking-widest mb-2">

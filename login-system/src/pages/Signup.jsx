@@ -1,6 +1,7 @@
-import SignupForm from "../components/SignupForm"
+import { Link } from "react-router-dom"
+import SignupForm from "../components/SignUpForm"
 
-export default function Signup({ setPage }) {
+export default function Signup() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background text-on-surface font-sans relative overflow-hidden">
 
@@ -33,12 +34,9 @@ export default function Signup({ setPage }) {
         <div className="text-center pb-6">
           <p className="text-sm text-outline">
             Already have an account?{" "}
-            <button
-              onClick={() => setPage("login")}
-              className="text-primary hover:underline"
-            >
+            <Link to="/" className="text-primary hover:underline">
               Login
-            </button>
+            </Link>
           </p>
         </div>
 
