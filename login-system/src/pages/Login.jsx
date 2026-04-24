@@ -1,4 +1,5 @@
-import LoginForm from "../components/LoginForm"
+import { Link } from "react-router-dom"
+import LoginForm from "../components/LogInForm"
 
 export default function Login({ onLogin }) {
   return (
@@ -33,16 +34,12 @@ export default function Login({ onLogin }) {
 
         <LoginForm onLogin={onLogin} />
 
-        {/* 🔥 ADD THIS SIGNUP LINK */}
         <div className="text-center pb-6">
           <p className="text-sm text-outline">
             No account yet?{" "}
-            <button
-              onClick={() => setPage("signup")}
-              className="text-primary hover:underline"
-            >
+            <Link to="/signup" className="text-primary hover:underline">
               Sign up
-            </button>
+            </Link>
           </p>
         </div>
 
